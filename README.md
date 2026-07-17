@@ -40,6 +40,15 @@ Create a production build with:
 npm run build
 ```
 
+## GitHub Pages
+
+The repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+After pushing the project to `main`, enable **Settings → Pages → Source: GitHub Actions** in the repository. Each push to `main` will then build and publish the site automatically.
+
+The expected Pages URL is:
+
+`https://ysf204.github.io/FeelAlive-LandingPage/`
+
 ## Attribution
 
 This landing page was made by **SOL 5.6**. All prompting, creative direction, and AI work were done by **Yousef**.

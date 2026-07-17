@@ -5,14 +5,16 @@ import OrbitImages from './components/OrbitImages'
 import './App.css'
 
 const backgroundVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_055001_8e16d972-3b2b-441c-86ad-2901a54682f9.mp4'
+const siteBase = import.meta.env.BASE_URL
+const asset = (path: string) => `${siteBase}${path.replace(/^\//, '')}`
 
 const orbitImagesData = [
-  { src: '/flora/twin-tulips.png', name: 'Twin Tulips', number: 'No. 01' },
-  { src: '/flora/quiet-garden.png', name: 'Quiet Garden', number: 'No. 02' },
-  { src: '/flora/meadow-hymn.png', name: 'Meadow Hymn', number: 'No. 03' },
-  { src: '/flora/blue-iris.png', name: 'Blue Iris', number: 'No. 04' },
-  { src: '/flora/ember-lily.png', name: 'Ember Lily', number: 'No. 05' },
-  { src: '/flora/midnight-bloom.png', name: 'Midnight Bloom', number: 'No. 06' },
+  { src: asset('flora/twin-tulips.png'), name: 'Twin Tulips', number: 'No. 01' },
+  { src: asset('flora/quiet-garden.png'), name: 'Quiet Garden', number: 'No. 02' },
+  { src: asset('flora/meadow-hymn.png'), name: 'Meadow Hymn', number: 'No. 03' },
+  { src: asset('flora/blue-iris.png'), name: 'Blue Iris', number: 'No. 04' },
+  { src: asset('flora/ember-lily.png'), name: 'Ember Lily', number: 'No. 05' },
+  { src: asset('flora/midnight-bloom.png'), name: 'Midnight Bloom', number: 'No. 06' },
 ]
 
 export default function App() {
@@ -129,7 +131,7 @@ export default function App() {
             </article>
 
             <figure className="horizontal-landscape">
-              <motion.img src="/journey/mountain-passage-hd.png" alt="A rider crossing a green alpine meadow beneath a snow-covered mountain" decoding="async" style={{ scale: landscapeScale }} />
+              <motion.img src={asset('journey/mountain-passage-hd.png')} alt="A rider crossing a green alpine meadow beneath a snow-covered mountain" decoding="async" style={{ scale: landscapeScale }} />
               <figcaption>
                 <span>Field note No. 07</span>
                 <span>Somewhere between stillness and becoming</span>
